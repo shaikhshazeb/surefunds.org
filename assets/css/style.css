@@ -272,10 +272,51 @@ body {
 .logo {
   font-family: var(--ff-league-spartan);
   color: var(--black);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: var(--fw-700);
   line-height: 1;
 }
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+#text {
+  display: inline-block;
+  color: #fa004f;
+  font-weight: bold;
+  transition: opacity 0.6s ease-in-out;
+  animation: fadeSlide 4s ease-in-out infinite both;
+}
+
+  /* #text{
+    color:hsl(341, 100%, 49%);
+    margin-left:8px;
+    display:inline-block;
+    opacity:0;
+    transform:translateY(10px);
+    animation:fadeIn 0.6s ease forwards;
+  }
+  @keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+  } */
+
 
 .nav-toggle-btn { font-size: 40px; }
 
